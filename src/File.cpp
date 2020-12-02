@@ -32,12 +32,11 @@ void CFile::FillTheArray()
 
 void CFile::FillTheFile()
 {
-    int first = abs(Array[0]);
+    int *first{(std::find_if(Array, Array + 100, [](int x) { return x % 2 != 0; }))};
     int CopyArray[100] = {};
-    CopyArray[0] = first;
-    for(int i = 1; i < 100; i++)
+    for(int i = 0; i < 100; i++)
     {
-        CopyArray[i] = Array[i] + first;
+        CopyArray[i] = Array[i] + abs(*first);
     }
     for(int i = 0; i < 100; i++)
         std::cout << Array[i] << "|" << CopyArray[i] << std::endl;
