@@ -39,7 +39,8 @@ void CFile::FillTheFile()
         CopyArray[i] = Array[i] + abs(*first);
     }
     for(int i = 0; i < 100; i++)
-        std::cout << Array[i] << "|" << CopyArray[i] << std::endl;
+            std::cout <<std::setw(3) << Array[i] << "|" << CopyArray[i] << std::endl;
+
     std::ofstream File("output.txt");
     if(File)
     {

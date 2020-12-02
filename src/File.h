@@ -8,6 +8,7 @@
 #include <fstream>
 #include <random>
 #include <ctime>
+#include <iomanip>
 
 class CFile {
 
